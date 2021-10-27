@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      input {
+        width:3em;
+      }
+    </style>
+  </head>
+  <body>
+
+<p>
+standard form: <br>
+    <input type="number" id="A" value="1" title="A"> x +
+    <input type="number" id="B" value="1" title="B"> y =
+    <input type="number" id="C" value="1" title="C">
+<p>
+slope intercept form: <br>
+    <div id="output"> </div>
+
+  </body>
+  <script type="text/javascript">
+
+  function stdToSI(){
+    A = document.getElementById("A").value;
+    console.log(A)
+    B = document.getElementById("B").value;
+    console.log(B)
+    C = document.getElementById("C").value;
+    console.log(C)
+
+    m = -A/B;
+    b = C/B;
+    console.log("m",m, "b", b);
+
+    txt = `y = ${m} x + ${b}`;
+    document.getElementById("output").innerHTML = txt;
+  }
+  stdToSI ();
+
+  var inputElement = document.getElementById('A');
+  inputElement.addEventListener('change',stdToSI);
+
+inputElement = document.getElementById('B');
+inputElement.addEventListener('change',stdToSI);
+
+inputElement = document.getElementById('C');
+inputElement.addEventListener('change',stdToSI);
+  </script>
+</html>

@@ -6,24 +6,33 @@
       background-color: purple
     }
     #mydiv {
-      cursor:pointer; 
+      cursor:pointer;
     }
 div {
     border: 1px solid black
   }
-    </style> 
+    </style>
 </head>
 
   <body>
     <h1>
       uhhh
     </h1>
-    <em> maddy </em> <i> is </i> <b> awesomesauce </b>
+    <em id="clicktest"> maddy </em> <i> is </i> <b> awesomesauce </b>
 <p>
   this is a paragraph
 </p>
     <div id= "mydiv" >
       This is my div
     </div>
+
+
   </body>
+  <script type="text/javascript">
+  x=document.getElementById("clicktest");
+  x.addEventListener("click",function(){
+    console.log("hi kate");
+  })
+
+  </script>
 </html>
